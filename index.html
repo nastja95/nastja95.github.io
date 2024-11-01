@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aszendentenberechnung</title>
+  <style>
+    /* Allgemeines Styling */
+    body { 
+      font-family: Arial, sans-serif; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      margin-top: 50px; 
+      background-color: #f0f0f0; 
+    }
+    .container { 
+      display: flex; 
+      align-items: center; 
+    }
+    .skat-deck { 
+      width: 100px; 
+      margin: 0 20px; /* Abstand zum Hauptinhalt */
+    }
+    form { 
+      max-width: 400px; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 10px; 
+      padding: 20px; 
+      border: 1px solid #ccc; 
+      border-radius: 8px; 
+      background-color: #ffffff; 
+    }
+    #ergebnis { 
+      font-size: 18px; /* Größere Schrift für den Ergebnistext */
+      margin-top: 20px; 
+      padding: 15px; 
+      max-width: 600px; 
+      text-align: center; 
+      border: 1px solid #ddd; 
+      background-color: #fafafa; 
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Finde deinen Aszendenten heraus!</h1>
+  
+  <div class="container">
+    <!-- Bild des Skat-Decks links -->
+    <img src="skat_deck.jpg" alt="Skat Deck" class="skat-deck">
+    
+    <!-- Formular in der Mitte -->
+    <form id="aszendentForm">
+      <label for="geburtstag">Geburtstag:</label>
+      <input type="date" id="geburtstag" required>
+
+      <label for="geburtszeit">Geburtszeit:</label>
+      <input type="time" id="geburtszeit" required>
+
+      <label for="geburtsort">Geburtsort:</label>
+      <input type="text" id="geburtsort" required>
+
+      <label for="rauchverhalten">Rauchverhalten:</label>
+      <select id="rauchverhalten">
+        <option>Raucher</option>
+        <option>Nichtraucher</option>
+      </select>
+
+      <label for="skatkenntnisse">Skatkenntnisse:</label>
+      <select id="skatkenntnisse">
+        <option>Gut</option>
+        <option>Mittel</option>
+        <option>Keine</option>
+      </select>
+
+      <label for="ironie">Anwendung von Ironie:</label>
+      <select id="ironie">
+        <option>Häufig</option>
+        <option>Selten</option>
+        <option>Nie</option>
+      </select>
+
+      <button type="button" onclick="berechneAszendent()">Berechne</button>
+    </form>
+    
+    <!-- Bild des Skat-Decks rechts -->
+    <img src="skat_deck.jpg" alt="Skat Deck" class="skat-deck">
+  </div>
+
+  <div id="ergebnis"></div>
+
+  <script>
+    function berechneAszendent() {
+      // Der immer gleiche Text als Ausgabe
+      const ergebnisText = "Dein Aszendent ist berechnet! Basierend auf den Eingaben ist dein Aszendent BITCH. Das bedeutet, dass du eine ziemlich coole Person bist. Du bist lustig, schlau und alle lieben dich. Feier dich, trink einen Sekt. Geh tanzen. Und wenn du mal abgefuckt bist, kein ding deine Bitch Seite in der regelt das. Normalerweise glauben Aszendent bitches nicht so an esoterische Kackscheiße, aber hier bist du dir sicher. Du bist eine bitch..";
+
+      // Ausgabe des Textes
+      document.getElementById("ergebnis").innerText = ergebnisText;
+    }
+  </script>
+  
+</body>
+</html>
